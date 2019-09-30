@@ -63,6 +63,25 @@ ul{
 	.social-ul li{
 		padding: 22.5px;
 	}
+	.social-ul li:before{
+	content: '';
+	border-radius: 50%;
+	
+	transform: scale(0);
+	position: absolute;
+	
+	
+	padding: 19px;
+	border: 3px solid white;
+	transition: .4s;
+}
+}
+@media screen and (max-width: 360px)
+{
+	.social-ul li{
+		padding: 18.5px;
+	}
+
 }
 @media (min-width: 768px)
 {
@@ -213,30 +232,68 @@ cursor: pointer;
 	align-items: center;
 	align-content: center;
 	width: 100%;
-	background: #cbcbcb;
+	background: #1A1A1A;
+	height: 8vh;
 }
 .header-nav-div a
 {
+	overflow: hidden;
 padding: 10px;
 text-decoration: none;
-color: black;
+color: white;
 position: relative;
+transition: all .3s;
+padding: 10px !important;
+}
+.header-nav-div a:hover{
+	transform: scale(1.2);
+box-shadow: 0px 0px 15px 10px rgba(0,0,255, 0.7);
+border-radius: 10%;
+
+
 }
 .header-nav-div a:before{
-	position: absolute;
+	width: 20%;
 	content: '';
-	left: 1%;
-	right: 1%;
-	top: 10%;
-	bottom: 10%;
-	border-top: 2px solid #9c27b0;
-	border-bottom: 2px solid #9c27b0;
-	transform: scaleX(0);
-	transition: .4s;
+	position: absolute;
+	height: 100%;
+	transform: skewX(-45deg);
+	background: rgba(255,255,255, 0.8);
+	left: -50%;
+	top: -10%;
+	transition: all 1.3s;
 }
 .header-nav-div a:hover:before
 {
+	animation-name: blickHeader;
+	animation-iteration-count: infinite;
+	animation-duration: 3s;
+}
+.header-nav-div a:after{
+	content: '';
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	position: absolute;
+	border-top: 3px  solid rgba(0,0,255, 0.9);
+	border-bottom: 3px  solid rgba(0,0,255, 0.9);
+	transition: all .7s;
+	transform: scaleX(0);
+}
+.header-nav-div a:hover:after{
 	transform: scaleX(1);
+}
+@keyframes blickHeader{
+	0%{
+		left: -50%;
+	}
+	40%{
+		left: 150%;
+	}
+	100%{
+		left: 150%;
+	}
 }
 @media screen and (max-width: 768px)
 {
@@ -245,7 +302,9 @@ position: relative;
 		font-size: 1rem;
 	}
 	#last{
-		background: white;
+		display: flex;
+		justify-content: center;
+		background: black;
 		width: 45px;
 		text-align: center;
 		align-items: center;
@@ -255,11 +314,19 @@ position: relative;
 		padding: 7.5px;
 		margin: 5px;
 		transition: .2s;
+		z-index: 3100 !important;
+
 	}
 
-	#last:before{
-		border: none !important; 
+	#last:before,
+	#last:after {
+		box-shadow: none !important;
+		text-shadow: none !important;
+		border: none !important;
+		text-align: center;
+		transform: scale(0) !important;
 	}
+
 }
 @media screen and (max-width: 767px)
 {
@@ -293,6 +360,7 @@ position: relative;
 {
 .span
 {
+	color: white;
 margin-left: 5px !important;
 padding-left: 1px !important;
 }
@@ -446,30 +514,26 @@ margin-right: 10vw;
 	background: none;
 }
 .modal-window{
-	opacity: 0;
-	display: none ;
-	transition: all .6s;
-
-
+	display: none;
+	transition: all .9s;
 	position: fixed;
-	z-index: 2000;
-	display: flex;
+	z-index: 200000 !important;
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
 	width: 50vw;
-	border: 1px solid black;
 	margin-left: 25vw;
 	height: 50vh;
 	margin-top: 25vh !important;
 	background: white;
 	border-radius: 8px;
 }
+
 .podKLADka
 {
 	opacity: 0;
 	display: none;
-	transition: all .6s;
+	transition: all .9s;
 
 
 	width: 100vw;
@@ -727,6 +791,15 @@ border: 2px solid green !important;
 	color: white !important;
 	transition: all .4s;
 }
-.header-nav-div *{
-	z-index: 3000 !important;
+@media(min-width: 769px)
+{
+	.header-nav-div *{
+	z-index: 1000 !important;
+}
+}
+@media(max-width: 769px)
+{
+	.header-nav-div *{
+	z-index: 31000 !important;
+}
 }
