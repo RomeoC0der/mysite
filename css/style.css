@@ -447,7 +447,7 @@ margin-right: 10vw;
 }
 .modal-window{
 	opacity: 0;
-	display: none !important;
+	display: none ;
 	transition: all .6s;
 
 
