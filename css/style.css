@@ -727,3 +727,6 @@ border: 2px solid green !important;
 	color: white !important;
 	transition: all .4s;
 }
+.header-nav-div *{
+	z-index: 3000 !important;
+}
