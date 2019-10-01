@@ -167,10 +167,11 @@ cursor: pointer;
 .Fresher:before{
 	content: '';
 	position: absolute;
-	background:rgba(255,255,255, 0.9);
+	background:rgba(255,255,255, 0.7);
+	z-index: 1;
 	width: 10%;
 	left: -20%;
-	height: 90%;
+	height: 80%;
 	transform: skewX(-45deg);
 	animation-duration: 4s;
 	animation-timing-function: 1s;
@@ -183,7 +184,7 @@ cursor: pointer;
 }
 @keyframes blick{
 	0%{
-		left: -20%;
+		left: -8%;
 	}
 	40%{
 		left: 110%;
@@ -354,7 +355,7 @@ border-radius: 10%;
 .Fresher:hover{
 	transform: scale(1.3);
 	color: black;
-  color: #0B2349;
+
 }
 @media screen and (max-width: 480px)
 {
@@ -367,109 +368,7 @@ padding-left: 1px !important;
 
 }
 
-.slidePlace{
-	position: relative;
-	display: block;
-	width: 100vw;
-	height: 80vh;
-	overflow: hidden;
-	margin: auto;
-	transition: all .7s;
-}
-.slidePlace img
-{
-	
-	width: 100vw;
-	height: 80vh;
-	transition: all .7s;
-}
-.slider{
-	transition: all .7s;
-	height: 80vh;
-	width: 9000px;
-}
-@media screen and (min-width: 1000px)
-{
-	.slidePlace img
-	{
-		width: 70vw !important;
-		
-	}
-	.slidePlace{
-		width: 70vw !important;
-		
-	}
-	.flexBox{
-		
-		position: relative;
-		width: 70vw !important;
-		display: flex;
-		justify-content: space-between !important;
-		align-items: flex-end !important;
-		flex-direction: row;
-		margin-left:  15% !important;
-	}
-	.flexbtns{
-		margin-left: 5% !important;
-		margin-right: 5% !important;
-		display: flex !important;
-		align-items: center !important;
-		justify-content: space-between !important;
-		transition: all 1.3s !important;
-	}
-	.slide{
-	transition: all 1.3s !important;
 
-	}
-	.slider{
-		transition: all 1.3s !important;
-	}
-	
-}
-.slider{
-	transition: all 1.3s !important;
-}
-@media(max-width: 767px)
-{
-
-	.slidePlace img{
-		width: 100vw !important;
-		height: 50vh;
-	}
-	.slidePlace {
-		margin-top: 2vh;
-		width: 100vw !important;
-		height: 50vh;
-	}
-	.flexbtns {
-		width: 15vw !important;
-		height: 0.4vh !important;
-	}
-
-}
-@media(min-width: 767px) and (max-width: 1280px)
-{
-	.slidePlace img{
-		width: 100vw !important;
-		height: 50vh;
-	}
-	.slidePlace {
-		width: 100vw !important;
-		height: 50vh;
-	}
-
-}
-@media (min-width: 1600px)
-{
-	.slidePlace img{
-		width: 85vw;
-		height: 70vh;
-	}
-	.slidePlace{
-		height: 70vh;
-		width: 85vw;
-	}
-}
 @media (min-width: 1280px)
 {
 	.header-nav-div{
@@ -480,39 +379,7 @@ padding-left: 1px !important;
 		margin-left: 1.2vw;
 	}
 }
-.flexBox{
-display: flex;
-position: absolute;
-justify-content:space-between;
-z-index: 1900 !important;
-align-items: center;
-width: 80vw;
-margin: auto;
-margin-left: 10vw;
-margin-right: 10vw;
-}
-.flexbtns
-{
-	margin: 0;
-	padding: 0;
-	width: 11vw;
-	max-width: 100%;
-	height: 0.6vh;
-	background: none;
-	cursor: pointer;
-	border: 1px solid gray;
-	padding: 1px;
-	transition: .4s;
-}
-.flexbtns:hover{
-	background: green;
-}
-#active{
-	background: green;
-}
-#non-active{
-	background: none;
-}
+
 .modal-window{
 	display: none;
 	transition: all .9s;
@@ -784,22 +651,67 @@ border: 2px solid green !important;
 
 .body-our-portait
 {
+display: flex;
+width: 100%;
+align-items: center !important;
+
+margin-top: 6vh;
+position: absolute;
+background: rgba(255,255,255, 0.04);
 
 }
-
+.Roman{
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	width: 50%;
+	flex-direction: column;
+	justify-content: center;
+		padding: 15px;
+		text-align: center;
+}
+.Roman,
+.Nikita{
+	color: #d3d1d1;
+}
+.Nikita{
+	margin-left: auto;
+	display: flex;
+	width: 50%;
+	justify-content: center;
+	align-items:center; 
+flex-direction: column;
+	padding: 15px;
+	text-align: center;
+}
+.body-our-portait img{
+	position: relative;
+	border-radius: 50%;
+	max-width: 100px;
+	width: 100%;
+	transition: .6s;
+	cursor: pointer;
+}
+.body-our-portait img:hover{
+	transform: translateY(-20px);
+	transform: rotate(360deg);
+}
 .social-ul li:hover  a{
 	color: white !important;
 	transition: all .4s;
 }
-@media(min-width: 769px)
+@media screen and (max-width: 480px)
 {
-	.header-nav-div *{
-	z-index: 1000 !important;
+	.body-our-portait *{
+		font-size: 0.7rem;
+	}
 }
-}
-@media(max-width: 769px)
-{
-	.header-nav-div *{
-	z-index: 31000 !important;
-}
+.body{
+	background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+	height: 100vh;
+	scroll-behavior: smooth;
+	z-index: 0;
 }
