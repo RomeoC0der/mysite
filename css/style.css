@@ -720,7 +720,7 @@ flex-direction: column;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-	height: 300vh;
+	height: 200vh;
 	scroll-behavior: smooth;
 	z-index: 0;
 	position: relative;
