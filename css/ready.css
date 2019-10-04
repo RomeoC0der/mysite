@@ -19,7 +19,8 @@
 {
 .our-works-body img{
 	max-width: 100%;
-	max-width: 20vw;
+	max-width: 70px;
+
 }
 
 }
@@ -481,5 +482,92 @@ align-items: center;
 	.footer-body-right-data
 	{
 		margin-left: 0.5em;
+	}
+}
+@media (max-width: 568px)
+{
+	.We-product-title h2{
+		font-size: 1.5em;
+	}
+	.column{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30%;
+	height: auto;
+	
+	}
+	.column h2{
+	color: white;
+	padding: 0.3em;
+	border-bottom: 0.1em solid black;
+	font-size: 0.5em;
+}
+.column p{
+	color: white;
+	font-size: 0.2em;
+}
+.column-img{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: .3em;
+}
+.column-img2{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: .3em;
+}
+.column-img img{
+
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+.column-img3{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0.9em;
+}
+.column-img3 img{
+
+	max-width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+
+}
+@media (min-width: 569px) and (max-width: 850px)
+{
+	.column{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 30%;
+	height: auto;
+
+	}
+	.column h2{
+		font-size: .9em;
+		padding: 0.1em;
+	}
+	.column-img{
+		margin: .5em;
+	}
+	.column p{
+		font-size: .7em;
+	}
+	.column-img2{
+		margin: .5em;
+	}
+	.column p{
+		font-size: .7em;
 	}
 }
