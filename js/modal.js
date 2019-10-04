@@ -3,7 +3,7 @@ let podkladka = document.querySelector('.podKLADka');
 let closeButton = document.querySelector('.close');
 
 
- let timeOut = 13000;
+ let timeOut = 1300000;
 let timerToOut = setTimeout(showModal, timeOut);
 
 
